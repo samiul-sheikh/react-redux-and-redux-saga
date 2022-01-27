@@ -11,7 +11,7 @@ const users = (state = initialState, action) => {
         case "GET_USERS_SUCCESS":
             return { ...state, loading: false, users: action.users };
         case "GET_USERS_FAILED":
-            return { ...state, loading: false, users: action.messages };
+            return { ...state, loading: false, error: action.message };
         default:
             return state;
     }
